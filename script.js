@@ -13,6 +13,8 @@ console.log(checkDateObject(1717942602));
 
 // 2. Create today's date
 
+console.log(new date());
+
 // 3. Get the current timestamp (using a static method of Date)
 
 // 4. Create a date to represent next Christmas Day
