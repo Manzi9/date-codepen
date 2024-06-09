@@ -13,44 +13,55 @@ console.log(checkDateObject(1717942602));
 
 // 2. Create today's date
 
-console.log(new date());
+console.log(new Date());
 
 // 3. Get the current timestamp (using a static method of Date)
 
+console.log(new Date(1717970178 * 1000));
+
 // 4. Create a date to represent next Christmas Day
+
+console.log(new Date(1735163778 * 1000));
 
 // 5. Work out how many days it is until christmas
 
+console.log(new Date(1735163778 - 1717970178) / 60 / 60 / 25); //I seem to be 9 days off?
+
 // Get difference between now and xmas
 
+console.log(1735163778 - 1717970178);
+
 // Divide by number of ms in 1 day:
+
+console.log((1735163778 - 1717970178) / 86400000);
+
 // milliseconds per day = 24 hrs/day * 60 minutes/hour * 60 seconds/minute * 1000 msecs/second
 
 // Math.floor for whole days; Math.ceil to include today
 
 // 6. I'm going to make 2 random dates. I want you to log out which one is earlier (or if they are the same?!)
 
-// function getRandomIntInclusive(min, max) {
-//   min = Math.ceil(min);
-//   max = Math.floor(max);
-//   return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
-// }
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
 
-// const date1 = new Date(
-//   new Date().getFullYear(),
-//   getRandomIntInclusive(0, 1),
-//   getRandomIntInclusive(1, 27)
-// );
+const date1 = new Date(
+  new Date().getFullYear(),
+  getRandomIntInclusive(0, 1),
+  getRandomIntInclusive(1, 27)
+);
 
-// console.log("date1", date1);
+console.log("date1", date1);
 
-// const date2 = new Date(
-//   new Date().getFullYear(),
-//   getRandomIntInclusive(0, 1),
-//   getRandomIntInclusive(1, 27)
-// );
+const date2 = new Date(
+  new Date().getFullYear(),
+  getRandomIntInclusive(0, 1),
+  getRandomIntInclusive(1, 27)
+);
 
-// console.log("date2", date2);
+console.log("date2", date2);
 
 // 7. How do I test if a date is valid? ****
 
